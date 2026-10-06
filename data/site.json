@@ -1,12 +1,9 @@
 {
   "instagram_username": "bless.themess30",
   "announcement": "Custom orders are open — send your idea on Instagram",
-  "hero_image": "images/art/landscape.jpg",
   "about_heading": "Join me on this creative journey",
-  "about_text": "",
+  "hero_image": "images/art/landscape.jpg",
   "about_image_1": "images/art/phonecase.jpg",
-  "about_image_2": "images/art/tealights.jpg",
-  "delivery_note": "",
   "categories": [
     {
       "name": "Paintings",
@@ -44,5 +41,8 @@
       "price_range": "",
       "image": "images/art/padharosa.jpg"
     }
-  ]
+  ],
+  "about_image_2": "images/art/tealights.jpg",
+  "delivery_note": "",
+  "about_text": "It started with a sketchbook and a box of paints. Then I got curious about what else I could make, so I tried clay. Then a pair of plain white sneakers. Then phone covers, tealight holders, a bit of digital art, and a few things I'm still figuring out.\n\nI called this place Bless the Mess because that's what my desk looks like most days: paint on my fingers, clay drying on the table, half-finished ideas everywhere. Some of my favourite pieces came out of that mess, usually from an experiment I wasn't sure would work.\n\nIf something here makes you smile, or you have an idea you'd like made by hand, message me on Instagram. I'd love to make it with you."
 }
