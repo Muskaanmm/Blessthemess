@@ -1,0 +1,169 @@
+{
+  "artworks": [
+    {
+      "title": "Temple Steps",
+      "category": "Paintings",
+      "medium": "Watercolour",
+      "size": "",
+      "price": "",
+      "status": "",
+      "featured": true,
+      "image": "images/art/temple-framed.jpg",
+      "instagram": ""
+    },
+    {
+      "title": "The Local",
+      "category": "Paintings",
+      "medium": "Watercolour & ink",
+      "size": "",
+      "price": "",
+      "status": "",
+      "featured": true,
+      "image": "images/art/train-framed.jpg",
+      "instagram": ""
+    },
+    {
+      "title": "Red Meadow",
+      "category": "Paintings",
+      "medium": "Oil on canvas",
+      "size": "",
+      "price": "",
+      "status": "",
+      "featured": true,
+      "image": "images/art/landscape-framed.jpg",
+      "instagram": ""
+    },
+    {
+      "title": "Bani Thani",
+      "category": "Paintings",
+      "medium": "",
+      "size": "",
+      "price": "",
+      "status": "",
+      "featured": false,
+      "image": "images/art/banithani.jpg",
+      "instagram": ""
+    },
+    {
+      "title": "Three Women",
+      "category": "Paintings",
+      "medium": "",
+      "size": "",
+      "price": "",
+      "status": "",
+      "featured": false,
+      "image": "images/art/folkwomen.jpg",
+      "instagram": ""
+    },
+    {
+      "title": "Gatka",
+      "category": "Paintings",
+      "medium": "",
+      "size": "",
+      "price": "",
+      "status": "",
+      "featured": false,
+      "image": "images/art/gatka.jpg",
+      "instagram": ""
+    },
+    {
+      "title": "Campus Afternoon",
+      "category": "Paintings",
+      "medium": "",
+      "size": "",
+      "price": "",
+      "status": "",
+      "featured": false,
+      "image": "images/art/college.jpg",
+      "instagram": ""
+    },
+    {
+      "title": "Blue Leaves",
+      "category": "Paintings",
+      "medium": "",
+      "size": "",
+      "price": "",
+      "status": "",
+      "featured": false,
+      "image": "images/art/blueleaves.jpg",
+      "instagram": ""
+    },
+    {
+      "title": "Little Ghost",
+      "category": "Clay figures",
+      "medium": "Clay",
+      "size": "",
+      "price": "",
+      "status": "Made to order",
+      "featured": false,
+      "image": "images/art/ghost.jpg",
+      "instagram": ""
+    },
+    {
+      "title": "Blindfold",
+      "category": "Sketches",
+      "medium": "Ink",
+      "size": "",
+      "price": "",
+      "status": "",
+      "featured": false,
+      "image": "images/art/sketch.jpg",
+      "instagram": ""
+    },
+    {
+      "title": "Starry Night Sneakers",
+      "category": "Custom shoes & jackets",
+      "medium": "Hand-painted shoes",
+      "size": "",
+      "price": "",
+      "status": "Made to order",
+      "featured": false,
+      "image": "images/art/shoes.jpg",
+      "instagram": ""
+    },
+    {
+      "title": "Green Waves Cover",
+      "category": "Phone covers",
+      "medium": "Hand-painted",
+      "size": "",
+      "price": "",
+      "status": "Made to order",
+      "featured": false,
+      "image": "images/art/greencase.jpg",
+      "instagram": ""
+    },
+    {
+      "title": "Collage Cover",
+      "category": "Phone covers",
+      "medium": "Collage & pressed flowers",
+      "size": "",
+      "price": "",
+      "status": "Made to order",
+      "featured": false,
+      "image": "images/art/phonecase.jpg",
+      "instagram": ""
+    },
+    {
+      "title": "Padharo Sa",
+      "category": "Décor & gifts",
+      "medium": "Wall plate",
+      "size": "",
+      "price": "",
+      "status": "Made to order",
+      "featured": false,
+      "image": "images/art/padharosa.jpg",
+      "instagram": ""
+    },
+    {
+      "title": "Tealight Holders",
+      "category": "Décor & gifts",
+      "medium": "Pearls, mirrors & roses",
+      "size": "",
+      "price": "",
+      "status": "Made to order",
+      "featured": false,
+      "image": "images/art/tealights.jpg",
+      "instagram": ""
+    }
+  ]
+}

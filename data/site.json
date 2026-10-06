@@ -1,0 +1,48 @@
+{
+  "instagram_username": "bless.themess30",
+  "announcement": "Custom orders are open — send your idea on Instagram",
+  "hero_image": "images/art/landscape.jpg",
+  "about_heading": "Join me on this creative journey",
+  "about_text": "",
+  "about_image_1": "images/art/phonecase.jpg",
+  "about_image_2": "images/art/tealights.jpg",
+  "delivery_note": "",
+  "categories": [
+    {
+      "name": "Paintings",
+      "blurb": "Oil, acrylic & watercolour",
+      "price_range": "",
+      "image": "images/art/banithani.jpg"
+    },
+    {
+      "name": "Clay figures",
+      "blurb": "Little characters, made by hand",
+      "price_range": "",
+      "image": "images/art/ghost.jpg"
+    },
+    {
+      "name": "Sketches",
+      "blurb": "Pen, ink & pencil",
+      "price_range": "",
+      "image": "images/art/sketch.jpg"
+    },
+    {
+      "name": "Custom shoes & jackets",
+      "blurb": "Your pair, hand-painted",
+      "price_range": "",
+      "image": "images/art/shoes.jpg"
+    },
+    {
+      "name": "Phone covers",
+      "blurb": "Painted or collaged",
+      "price_range": "",
+      "image": "images/art/greencase.jpg"
+    },
+    {
+      "name": "Décor & gifts",
+      "blurb": "Name plates, tealights & more",
+      "price_range": "",
+      "image": "images/art/padharosa.jpg"
+    }
+  ]
+}

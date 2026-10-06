@@ -1,0 +1,77 @@
+# Bless the Mess — admin page settings
+# Repository that stores the website.
+backend:
+  name: github
+  repo: Muskaanmm/Blessthemess
+  branch: main
+
+site_url: https://blessthemess.netlify.app
+logo_url: /images/brand/icon.png
+
+# New photos uploaded from the admin page are saved here
+media_folder: "images/uploads"
+public_folder: "images/uploads"
+
+collections:
+  - name: "artworks"
+    label: "Artworks"
+    format: "json"
+    editor:
+      preview: false
+    files:
+      - name: "artworks"
+        label: "All artworks"
+        file: "data/artworks.json"
+        fields:
+          - label: "Artworks"
+            name: "artworks"
+            widget: "list"
+            add_to_top: true
+            label_singular: "artwork"
+            summary: "{{fields.title}} — {{fields.category}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - label: "Category"
+                name: "category"
+                widget: "select"
+                options: ["Paintings", "Clay figures", "Sketches", "Custom shoes & jackets", "Phone covers", "Décor & gifts"]
+              - { label: "Photo", name: "image", widget: "image", hint: "A clear, square-ish photo works best." }
+              - { label: "Instagram post link", name: "instagram", widget: "string", required: false, hint: "On Instagram open the post, tap ••• (or the share icon), then Copy link, and paste it here." }
+              - { label: "Price", name: "price", widget: "string", required: false, hint: "e.g. ₹2,500 or ₹2,000–₹4,000. Leave empty to show 'Ask for price'." }
+              - { label: "Medium", name: "medium", widget: "string", required: false, hint: "e.g. Oil on canvas, Watercolour, Clay" }
+              - { label: "Size", name: "size", widget: "string", required: false, hint: "e.g. A4, 12 × 16 in" }
+              - label: "Status"
+                name: "status"
+                widget: "select"
+                required: false
+                options: ["Available", "Sold", "Made to order"]
+                hint: "Optional label shown on the photo."
+              - { label: "Show in 'Featured originals' (top 3 on the homepage)", name: "featured", widget: "boolean", default: false, required: false }
+
+  - name: "site"
+    label: "Site text & prices"
+    format: "json"
+    editor:
+      preview: false
+    files:
+      - name: "site"
+        label: "Homepage text, About & category prices"
+        file: "data/site.json"
+        fields:
+          - { label: "Instagram username", name: "instagram_username", widget: "string", hint: "Without the @" }
+          - { label: "Top banner message", name: "announcement", widget: "string", required: false, hint: "Leave empty to hide the banner." }
+          - { label: "Big homepage picture", name: "hero_image", widget: "image" }
+          - { label: "About — heading", name: "about_heading", widget: "string" }
+          - { label: "About — a few lines from you", name: "about_text", widget: "text", required: false, hint: "Leave a blank line between paragraphs." }
+          - { label: "About — photo 1", name: "about_image_1", widget: "image", required: false }
+          - { label: "About — photo 2", name: "about_image_2", widget: "image", required: false }
+          - { label: "Delivery note (custom orders)", name: "delivery_note", widget: "string", required: false, hint: "e.g. Ships across India in 7–10 days. Shipping extra." }
+          - label: "Categories ('What I make')"
+            name: "categories"
+            widget: "list"
+            summary: "{{fields.name}} — {{fields.price_range}}"
+            fields:
+              - { label: "Name", name: "name", widget: "string", hint: "Keep these the same as the artwork categories." }
+              - { label: "Short description", name: "blurb", widget: "string", required: false }
+              - { label: "Price range", name: "price_range", widget: "string", required: false, hint: "e.g. ₹1,500–₹6,000. Leave empty to show 'Ask for price'." }
+              - { label: "Photo", name: "image", widget: "image" }
