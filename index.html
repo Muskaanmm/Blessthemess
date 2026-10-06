@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bless the Mess</title>
+<meta name="description" content="Handmade paintings, clay figures, sketches and custom pieces by Muskan. Order your own on Instagram.">
+<meta property="og:title" content="Bless the Mess — handmade art by Muskan">
+<meta property="og:description" content="Paintings, clay figures, sketches and made-to-order pieces.">
+<meta property="og:image" content="images/art/og.jpg">
+<link rel="icon" href="images/brand/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400;1,500&family=Mulish:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: light;
+  --bg:#ECECE7; --bg-alt:#E1E1DB; --card:#F4F4F0; --line:#CFCFC7;
+  --ink:#1F2E26; --ink-2:#434D47; --muted:#56605A;
+  --green:#4A6653; --green-deep:#1F2E26; --accent-text:#3F5A48;
+  --on-green:#FFFFFF; --on-green-soft:#E3ECE5;
+  --badge-bg:#1F2E26; --badge-ink:#F4F4F0;
+  --serif:'Cormorant Garamond', Georgia, serif;
+  --sans:'Mulish', system-ui, sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--accent-text);outline-offset:3px}
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px}
+.eyebrow{margin:0;font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--accent-text)}
+.h2{margin:0;font-family:var(--serif);font-weight:500;font-size:clamp(34px,4.4vw,48px);line-height:1.08;color:var(--ink);text-wrap:balance}
+.sect{padding:clamp(64px,9vw,104px) 0}
+.sect-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px;margin-bottom:36px}
+.sect-head > div{display:flex;flex-direction:column;gap:8px}
+.textlink{display:inline-flex;align-items:center;gap:6px;min-height:44px;font-size:14px;font-weight:700;text-decoration:none;color:var(--accent-text)}
+.textlink:hover{text-decoration:underline}
+.ico{width:20px;height:20px;flex:none}
+
+/* announcement */
+.announce{background:var(--green);color:var(--on-green);text-align:center;font-size:13px;letter-spacing:.05em;font-weight:600;padding:10px 16px}
+
+/* hero */
+.hero{position:relative;min-height:min(88vh,760px);display:flex;flex-direction:column;color:#fff;
+  background:#2a3a30 var(--hero-img, url(images/art/landscape.jpg)) center 60%/cover no-repeat}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(rgba(16,26,20,.34),rgba(16,26,20,.55))}
+.hero > *{position:relative}
+.nav{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:14px clamp(16px,3vw,40px)}
+.nav-links{display:flex;gap:clamp(14px,2.4vw,28px);font-size:14px;font-weight:600}
+.nav a{color:#fff;text-decoration:none;min-height:44px;display:inline-flex;align-items:center;gap:8px}
+.nav a:hover{opacity:.82}
+.hero-body{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px 20px 88px;gap:16px}
+.hero-kicker{margin:0;font-size:13px;letter-spacing:.24em;text-transform:uppercase;font-weight:700}
+.title-block{display:inline-flex;flex-direction:column}
+.hero h1{margin:0;font-family:var(--serif);font-weight:500;font-size:clamp(58px,9.5vw,112px);line-height:.95;letter-spacing:-.01em}
+.byline{display:flex;justify-content:flex-end;align-items:center;gap:8px;margin-top:-2px;margin-right:1%}
+.byline span{font-family:var(--serif);font-style:italic;font-size:clamp(20px,2.2vw,26px);line-height:1;transform:translateY(22%)}
+.byline img{height:clamp(62px,7vw,92px);width:auto;filter:drop-shadow(0 1px 2px rgba(0,0,0,.35))}
+.hero-sub{margin:6px 0 0;font-family:var(--serif);font-style:italic;font-size:clamp(20px,2.2vw,24px)}
+.hero-ctas{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:14px}
+.pill{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 28px;border-radius:999px;border:1.5px solid rgba(255,255,255,.92);color:#fff;text-decoration:none;font-weight:700;font-size:15px;transition:background .2s}
+.pill:hover{background:rgba(255,255,255,.16)}
+
+/* cards */
+.grid{display:grid;gap:22px}
+.g3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.g4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.art{display:flex;flex-direction:column;gap:12px;text-decoration:none;color:var(--ink)}
+.art .frame{position:relative;overflow:hidden;background:var(--bg-alt)}
+.art img{width:100%;aspect-ratio:1/1;object-fit:cover;transition:transform .5s ease}
+.art:hover img{transform:scale(1.03)}
+.art-title{font-weight:700;font-size:16px;color:var(--ink);display:flex;align-items:center;gap:6px}
+.art-meta{font-size:14px;color:var(--muted)}
+.art-price{font-size:14px;font-weight:700;color:var(--accent-text)}
+.badge{position:absolute;top:12px;left:12px;background:var(--badge-bg);color:var(--badge-ink);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:5px 10px}
+.ext{width:14px;height:14px;opacity:.7}
+
+.alt{background:var(--bg-alt)}
+.cat{display:flex;flex-direction:column;text-align:left;background:var(--card);border:0;padding:0;cursor:pointer;color:var(--ink)}
+.cat .frame{overflow:hidden}
+.cat img{width:100%;aspect-ratio:4/3;object-fit:cover;transition:transform .5s ease}
+.cat:hover img{transform:scale(1.03)}
+.cat-body{padding:16px 20px 20px;display:flex;flex-direction:column;gap:2px}
+.cat-name{font-family:var(--serif);font-size:26px;font-weight:600;line-height:1.2}
+.cat-blurb{font-size:14px;color:var(--muted)}
+.cat-price{font-size:14px;font-weight:700;color:var(--accent-text);margin-top:4px}
+
+/* gallery chips */
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
+.chip{min-height:44px;padding:0 18px;border-radius:999px;border:1.5px solid var(--line);background:transparent;cursor:pointer;font-size:14px;font-weight:600;color:var(--ink-2)}
+.chip:hover{border-color:var(--accent-text)}
+.chip[aria-pressed="true"]{background:var(--green);border-color:var(--green);color:var(--on-green)}
+.empty{color:var(--muted);padding:24px 0}
+
+/* custom order */
+.split{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(36px,6vw,72px);align-items:start}
+.lead{margin:12px 0 0;color:var(--ink-2);max-width:480px}
+.steps{display:flex;flex-direction:column;gap:22px;margin-top:28px;padding:0;list-style:none}
+.steps li{display:flex;gap:16px;align-items:flex-start}
+.num{flex:none;width:40px;height:40px;border-radius:999px;border:1.5px solid var(--accent-text);color:var(--accent-text);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:20px;font-weight:600}
+.steps strong{display:block;color:var(--ink)}
+.steps span{font-size:15px;color:var(--ink-2)}
+.form{background:var(--card);border:1px solid var(--line);padding:clamp(22px,3vw,36px);display:flex;flex-direction:column;gap:16px}
+.form-title{margin:0;font-family:var(--serif);font-size:28px;font-weight:600;line-height:1.2}
+.field{display:flex;flex-direction:column;gap:6px;min-width:0}
+.field label{font-size:13px;font-weight:700;color:var(--ink)}
+.field input,.field select,.field textarea{border:1px solid var(--line);background:var(--bg);padding:0 14px;min-height:48px;font-size:16px;border-radius:0;width:100%}
+.field textarea{padding:12px 14px;resize:vertical;min-height:110px}
+.row2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.btn{min-height:52px;border:0;background:var(--green);color:var(--on-green);font-weight:700;font-size:15px;letter-spacing:.02em;display:flex;align-items:center;justify-content:center;gap:10px;cursor:pointer;padding:0 20px}
+.btn:hover{filter:brightness(1.08)}
+.fine{font-size:13px;color:var(--muted);text-align:center;margin:0}
+.status{font-size:14px;margin:0;color:var(--ink)}
+.status[hidden]{display:none}
+.copybox{display:flex;flex-direction:column;gap:8px}
+[hidden]{display:none !important}
+.copybox textarea{width:100%;min-height:120px;border:1px solid var(--line);background:var(--bg);padding:12px}
+.err{color:#9B2C2C;font-size:13px;margin:0}
+
+/* about */
+.about{background:var(--green);color:var(--on-green)}
+.about .eyebrow{color:var(--on-green-soft)}
+.about .h2{color:#fff}
+.about-photos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.about-photos img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.about-photos img + img{margin-top:44px}
+.about-text{margin:0;color:var(--on-green-soft);max-width:520px;white-space:pre-line}
+.about-sig{width:160px;height:auto;margin-top:6px}
+
+/* footer */
+footer{background:var(--green-deep);color:#D5E1D8;padding:56px 0 36px}
+.foot-top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:28px}
+.foot-brand{display:flex;flex-direction:column;gap:8px}
+.foot-brand img{width:140px;height:auto}
+.foot-brand span{font-family:var(--serif);font-size:24px;color:#fff}
+.foot-links{display:flex;flex-wrap:wrap;gap:6px 24px;font-size:14px;font-weight:600}
+.foot-links a{color:#D5E1D8;text-decoration:none;min-height:44px;display:inline-flex;align-items:center}
+.foot-links a:hover{color:#fff}
+.foot-bottom{border-top:1px solid rgba(213,225,216,.22);margin-top:28px;padding-top:20px;font-size:13px;color:#B5C4BA}
+
+@media (max-width: 960px){ .g4{grid-template-columns:repeat(3,minmax(0,1fr))} }
+@media (max-width: 860px){
+  .g3{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .split{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width: 620px){
+  .g3,.g4{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+  #featured .g3{grid-template-columns:minmax(0,1fr)}
+  #featured .art img{aspect-ratio:4/3}
+  .nav-handle{display:none}
+  .row2{grid-template-columns:minmax(0,1fr)}
+  .cat-name{font-size:21px}
+  .cat-body{padding:12px 14px 16px}
+  .art-title{font-size:15px}
+}
+@media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} .art img,.cat img{transition:none} }
+</style>
+</head>
+<body>
+<div class="announce" id="announce"></div>
+
+<header class="hero" id="top">
+  <nav class="nav" aria-label="Main">
+    <div class="nav-links">
+      <a href="#work">Work</a>
+      <a href="#custom">Custom orders</a>
+      <a href="#about">About</a>
+    </div>
+    <a class="ig-link" href="https://www.instagram.com/bless.themess30/" target="_blank" rel="noopener" aria-label="Instagram">
+      <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></svg>
+      <span class="nav-handle" id="nav-handle">@bless.themess30</span>
+    </a>
+  </nav>
+  <div class="hero-body">
+    <p class="hero-kicker">Handmade art &amp; custom pieces</p>
+    <div class="title-block">
+      <h1>Bless the Mess</h1>
+      <div class="byline"><span>by</span><img src="images/brand/sig-white.png" alt="Muskan"></div>
+    </div>
+    <p class="hero-sub">Paintings · Clay · Sketches · Made-to-order</p>
+    <div class="hero-ctas">
+      <a class="pill" href="#gallery">See the work</a>
+      <a class="pill" href="#custom">Order a custom piece</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="sect" id="work">
+    <div class="wrap" id="featured">
+      <div class="sect-head">
+        <div><p class="eyebrow">Featured originals</p><h2 class="h2">Fresh off the easel</h2></div>
+        <a class="textlink ig-link" href="https://www.instagram.com/bless.themess30/" target="_blank" rel="noopener">View all on Instagram
+          <svg class="ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></a>
+      </div>
+      <div class="grid g3" id="featured-grid"></div>
+    </div>
+  </section>
+
+  <section class="sect alt">
+    <div class="wrap">
+      <div class="sect-head" style="justify-content:center;text-align:center">
+        <div style="align-items:center"><p class="eyebrow">Shop by craft</p><h2 class="h2">What I make</h2></div>
+      </div>
+      <div class="grid g3" id="cat-grid"></div>
+    </div>
+  </section>
+
+  <section class="sect" id="gallery">
+    <div class="wrap">
+      <div class="sect-head">
+        <div><p class="eyebrow">The collection</p><h2 class="h2">All work</h2></div>
+        <p class="art-meta" style="margin:0;max-width:340px">Tap any piece to see it on Instagram and ask about it there.</p>
+      </div>
+      <div class="chips" id="chips" role="group" aria-label="Filter by craft"></div>
+      <div class="grid g4" id="gallery-grid" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <section class="sect alt" id="custom">
+    <div class="wrap split">
+      <div>
+        <p class="eyebrow">Custom orders</p>
+        <h2 class="h2" style="margin-top:8px">Have something in mind? Let's make it.</h2>
+        <p class="lead">A portrait, a painted pair of shoes, a phone cover or a gift for someone special. Tell me your idea and I'll take it from there.</p>
+        <ol class="steps">
+          <li><span class="num">1</span><div><strong>Share your idea</strong><span>Fill in the short form: what you'd like, the size and when you need it.</span></div></li>
+          <li><span class="num">2</span><div><strong>Send it on Instagram</strong><span>Your message is copied for you. Just paste it in my DMs.</span></div></li>
+          <li><span class="num">3</span><div><strong>I make it, you receive it</strong><span>We agree on the details and price, then I make your piece and send it to you.<span id="delivery-note"></span></span></div></li>
+        </ol>
+      </div>
+
+      <form class="form" id="order-form" novalidate>
+        <h3 class="form-title">Tell me about your piece</h3>
+        <div class="field">
+          <label for="f-type">What would you like?</label>
+          <select id="f-type" name="type"></select>
+        </div>
+        <div class="field">
+          <label for="f-idea">Your idea</label>
+          <textarea id="f-idea" name="idea" rows="4" placeholder="e.g. A portrait of my parents from a photo, in watercolour"></textarea>
+          <p class="err" id="idea-err" hidden>Please describe your idea in a few words.</p>
+        </div>
+        <div class="row2">
+          <div class="field"><label for="f-size">Size (if any)</label><input id="f-size" name="size" type="text" placeholder="e.g. A4, shoe size 7"></div>
+          <div class="field"><label for="f-date">Needed by</label><input id="f-date" name="date" type="text" placeholder="e.g. 20 November"></div>
+        </div>
+        <button class="btn" type="submit">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></svg>
+          Copy &amp; open Instagram
+        </button>
+        <p class="status" id="order-status" role="status" hidden></p>
+        <div class="copybox" id="copybox" hidden>
+          <label for="copy-text" class="fine" style="text-align:left">Copy this message and paste it in the Instagram chat:</label>
+          <textarea id="copy-text" readonly></textarea>
+        </div>
+        <p class="fine">No phone number needed. Everything happens in Instagram DMs.</p>
+      </form>
+    </div>
+  </section>
+
+  <section class="sect about" id="about">
+    <div class="wrap split" style="align-items:center">
+      <div class="about-photos" id="about-photos"></div>
+      <div style="display:flex;flex-direction:column;gap:18px">
+        <p class="eyebrow">The artist</p>
+        <h2 class="h2" id="about-heading">Join me on this creative journey</h2>
+        <p class="about-text" id="about-text" hidden></p>
+        <img class="about-sig" src="images/brand/sig-white.png" alt="Muskan">
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand"><img src="images/brand/sig-white.png" alt="Muskan"><span>Bless the Mess</span></div>
+      <nav class="foot-links" aria-label="Footer">
+        <a href="#gallery">Work</a><a href="#custom">Custom orders</a><a href="#about">About</a>
+        <a class="ig-link" href="https://www.instagram.com/bless.themess30/" target="_blank" rel="noopener">Instagram</a>
+      </nav>
+    </div>
+    <div class="foot-bottom">© <span id="year"></span> Bless the Mess · Every piece is handmade</div>
+  </div>
+</footer>
+
+<noscript><p style="text-align:center;padding:20px">See all work on <a href="https://www.instagram.com/bless.themess30/">Instagram</a>.</p></noscript>
+
+<script>
+(function(){
+  var DEFAULT_USER = 'bless.themess30';
+  var CATS_FALLBACK = ['Paintings','Clay figures','Sketches','Custom shoes & jackets','Phone covers','Décor & gifts'];
+  var state = { filter: 'All', site: null, artworks: [] };
+
+  function esc(s){ return String(s == null ? '' : s).replace(/[&<>"']/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
+  function cleanUser(u){ u = String(u || '').trim().replace(/^@/, ''); return /^[A-Za-z0-9._]{1,30}$/.test(u) ? u : DEFAULT_USER; }
+  function profileUrl(){ return 'https://www.instagram.com/' + state.user + '/'; }
+  function postUrl(u){
+    u = String(u || '').trim();
+    return /^https:\/\/(www\.)?instagram\.com\/[A-Za-z0-9._\/?=&%-]+$/.test(u) ? u : profileUrl();
+  }
+  function imgSrc(p){
+    p = String(p || '').trim();
+    if (!p || /["'<>\\]/.test(p)) return '';
+    if (/^https:\/\/[^\s]+$/i.test(p)) return p;
+    if (p.indexOf(':') === -1) { p = p.replace(/^\/+/, ''); try { p = decodeURI(p); } catch (e) {} return encodeURI(p); }
+    return '';
+  }
+  var EXT = '<svg class="ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>';
+
+  function artCard(a){
+    var meta = [a.medium, a.size].filter(Boolean).map(esc).join(' · ');
+    var price = a.status === 'Sold' ? 'Sold' : (a.price ? esc(a.price) : 'Ask for price');
+    var badge = a.status ? '<span class="badge">' + esc(a.status) + '</span>' : '';
+    var src = imgSrc(a.image);
+    return '<a class="art" href="' + esc(postUrl(a.instagram)) + '" target="_blank" rel="noopener" aria-label="' + esc(a.title) + ' — view on Instagram">' +
+      '<div class="frame">' + badge + (src ? '<img loading="lazy" src="' + esc(src) + '" alt="' + esc(a.title) + '">' : '') + '</div>' +
+      '<div><div class="art-title">' + esc(a.title) + ' ' + EXT + '</div>' +
+      (meta ? '<div class="art-meta">' + meta + '</div>' : '') +
+      '<div class="art-price">' + price + '</div></div></a>';
+  }
+
+  function renderFeatured(){
+    var list = state.artworks.filter(function(a){ return a.featured; }).slice(0, 3);
+    var box = document.getElementById('featured-grid');
+    if (!list.length) { document.getElementById('work').hidden = true; return; }
+    box.innerHTML = list.map(artCard).join('');
+  }
+
+  function categories(){
+    var c = (state.site && Array.isArray(state.site.categories) && state.site.categories.length) ? state.site.categories : CATS_FALLBACK.map(function(n){ return { name: n }; });
+    return c.filter(function(x){ return x && x.name; });
+  }
+
+  function renderCats(){
+    var box = document.getElementById('cat-grid');
+    box.innerHTML = categories().map(function(c){
+      var src = imgSrc(c.image);
+      return '<button class="cat" type="button" data-cat="' + esc(c.name) + '">' +
+        '<div class="frame">' + (src ? '<img loading="lazy" src="' + esc(src) + '" alt="">' : '') + '</div>' +
+        '<div class="cat-body"><span class="cat-name">' + esc(c.name) + '</span>' +
+        (c.blurb ? '<span class="cat-blurb">' + esc(c.blurb) + '</span>' : '') +
+        '<span class="cat-price">' + (c.price_range ? esc(c.price_range) : 'Ask for price') + '</span></div></button>';
+    }).join('');
+    box.querySelectorAll('.cat').forEach(function(b){
+      b.addEventListener('click', function(){
+        setFilter(b.getAttribute('data-cat'));
+        document.getElementById('gallery').scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+      });
+    });
+    var sel = document.getElementById('f-type');
+    sel.innerHTML = categories().map(function(c){ return '<option>' + esc(c.name) + '</option>'; }).join('') + '<option>Something else</option>';
+  }
+
+  function renderChips(){
+    var names = ['All'].concat(categories().map(function(c){ return c.name; }));
+    var box = document.getElementById('chips');
+    box.innerHTML = names.map(function(n){
+      return '<button class="chip" type="button" data-f="' + esc(n) + '" aria-pressed="' + (n === state.filter) + '">' + esc(n) + '</button>';
+    }).join('');
+    box.querySelectorAll('.chip').forEach(function(b){ b.addEventListener('click', function(){ setFilter(b.getAttribute('data-f')); }); });
+  }
+
+  function renderGallery(){
+    var list = state.filter === 'All' ? state.artworks : state.artworks.filter(function(a){ return a.category === state.filter; });
+    var box = document.getElementById('gallery-grid');
+    box.innerHTML = list.length ? list.map(artCard).join('') : '<p class="empty">New pieces coming soon. See the latest on <a href="' + esc(profileUrl()) + '" target="_blank" rel="noopener">Instagram</a>.</p>';
+  }
+
+  function setFilter(f){
+    state.filter = f;
+    document.querySelectorAll('.chip').forEach(function(b){ b.setAttribute('aria-pressed', String(b.getAttribute('data-f') === f)); });
+    renderGallery();
+  }
+
+  function renderSite(){
+    var s = state.site || {};
+    state.user = cleanUser(s.instagram_username);
+    document.querySelectorAll('.ig-link').forEach(function(a){ a.href = profileUrl(); });
+    document.getElementById('nav-handle').textContent = '@' + state.user;
+    var ann = document.getElementById('announce');
+    if (s.announcement) ann.textContent = s.announcement; else ann.hidden = true;
+    var hero = imgSrc(s.hero_image);
+    if (hero) document.getElementById('top').style.setProperty('--hero-img', 'url("' + hero.replace(/"/g, '') + '")');
+    if (s.about_heading) document.getElementById('about-heading').textContent = s.about_heading;
+    var at = document.getElementById('about-text');
+    if (s.about_text && String(s.about_text).trim()) { at.textContent = s.about_text; at.hidden = false; }
+    var ph = [imgSrc(s.about_image_1), imgSrc(s.about_image_2)].filter(Boolean);
+    document.getElementById('about-photos').innerHTML = ph.map(function(p){ return '<img loading="lazy" src="' + esc(p) + '" alt="">'; }).join('');
+    if (s.delivery_note) document.getElementById('delivery-note').textContent = ' ' + s.delivery_note;
+  }
+
+  function load(path){ return fetch(path, { cache: 'no-cache' }).then(function(r){ if (!r.ok) throw new Error(path); return r.json(); }); }
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+  state.user = DEFAULT_USER;
+
+  Promise.all([load('data/site.json').catch(function(){ return {}; }), load('data/artworks.json').catch(function(){ return { artworks: [] }; })])
+    .then(function(res){
+      state.site = res[0] || {};
+      state.artworks = (res[1] && Array.isArray(res[1].artworks) ? res[1].artworks : []).filter(function(a){ return a && a.title; });
+      renderSite(); renderFeatured(); renderCats(); renderChips(); renderGallery();
+    });
+
+  // Custom order form: copy the brief, open Instagram DMs
+  document.getElementById('order-form').addEventListener('submit', function(e){
+    e.preventDefault();
+    var f = e.target;
+    var idea = f.idea.value.trim();
+    var err = document.getElementById('idea-err');
+    if (!idea) { err.hidden = false; f.idea.focus(); return; }
+    err.hidden = true;
+    var lines = ['Hi! I found you on your website and would like a custom piece.', '', '• Type: ' + f.type.value, '• Idea: ' + idea];
+    if (f.size.value.trim()) lines.push('• Size: ' + f.size.value.trim());
+    if (f.date.value.trim()) lines.push('• Needed by: ' + f.date.value.trim());
+    var msg = lines.join('\n');
+    var status = document.getElementById('order-status');
+    var box = document.getElementById('copybox');
+    var ta = document.getElementById('copy-text');
+    ta.value = msg;
+
+    var dm = 'https://ig.me/m/' + state.user;
+    var copied;
+    try { copied = (navigator.clipboard && window.isSecureContext) ? navigator.clipboard.writeText(msg) : Promise.reject(); }
+    catch (x) { copied = Promise.reject(); }
+    var win = null;
+    try { win = window.open(dm, '_blank'); if (win) win.opener = null; } catch (x) { win = null; }
+    var chatLink = '<a href="' + esc(dm) + '" target="_blank" rel="noopener">Open the Instagram chat</a>';
+    copied.then(function(){
+      status.innerHTML = win ? 'Message copied! Paste it in the Instagram chat that just opened.' : 'Message copied! ' + chatLink + ' and paste it there.';
+      status.hidden = false; box.hidden = true;
+    }, function(){
+      status.innerHTML = 'Copy the message below, then ' + (win ? 'paste it in the Instagram chat that just opened.' : chatLink.replace('Open', 'open') + ' and paste it there.');
+      status.hidden = false; box.hidden = false; ta.focus(); ta.select();
+    });
+  });
+})();
+</script>
+</body>
+</html>
